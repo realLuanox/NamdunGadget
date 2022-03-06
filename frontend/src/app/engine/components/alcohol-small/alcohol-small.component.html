@@ -1,0 +1,12 @@
+<mat-card *ngIf="alcohol">
+  <mat-card-header>
+    <mat-card-title [innerText]="alcohol.name"></mat-card-title>
+    <mat-card-subtitle [innerText]="alcohol.englishName"></mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <img mat-card-image [src]="alcohol.image" [alt]="alcohol.name">
+
+    <p class="mt-4" [innerText]="alcohol.description"></p>
+    <p class="text-black-50">{{ alcohol.degree }}% / {{ alcohol.amount }}ml</p>
+  </mat-card-content>
+</mat-card>
