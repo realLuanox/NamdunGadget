@@ -17,13 +17,19 @@ import {MatButtonModule} from "@angular/material/button";
 import {RouterModule} from "@angular/router";
 import {SearchComponent} from './subDirs/search/search.component';
 import {RoutingModule} from "./router";
+import { FooterComponent } from './layout/footer/footer.component';
+import { NavbarComponent } from './layout/navbar/navbar.component';
+import { SidebarComponent } from './layout/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AlcoholSmallComponent,
     SearchbarComponent,
-    SearchComponent
+    SearchComponent,
+    FooterComponent,
+    NavbarComponent,
+    SidebarComponent,
   ],
   imports: [
     HttpClientModule,
