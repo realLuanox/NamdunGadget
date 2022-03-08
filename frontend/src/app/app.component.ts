@@ -9,20 +9,14 @@ import {Alcohol, Whiskey} from "./engine/interfaces/alcohol";
 })
 export class AppComponent implements OnInit {
   title = 'NamdunGadget';
-  alcohol: Alcohol | null = null;
-  showSidebar = window.innerWidth > 760;
+  showSidebar = window.innerWidth > 1300;
 
-  constructor(private apiService: ApiService) {
+  constructor() {
     window.onresize = () => {
-      this.showSidebar = window.innerWidth > 760;
+      this.showSidebar = window.innerWidth > 1300;
     };
   }
 
-  search(value: string): void {
-    this.apiService.get<Whiskey>(`/api/content/${value}.json`).subscribe(value => {
-      this.alcohol = value;
-    });
-  }
 
   ngOnInit(): void {
   }

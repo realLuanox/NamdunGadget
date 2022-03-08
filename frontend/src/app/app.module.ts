@@ -1,25 +1,29 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {AppComponent} from './app.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {HttpClientModule} from "@angular/common/http";
 import {AlcoholSmallComponent} from "./engine/components/alcohol-small/alcohol-small.component";
 import {MatCardModule} from "@angular/material/card";
-import { SearchbarComponent } from './engine/components/searchbar/searchbar.component';
+import {SearchbarComponent} from './engine/components/searchbar/searchbar.component';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatAutocompleteModule} from "@angular/material/autocomplete";
 import {MatInputModule} from "@angular/material/input";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatButtonModule} from "@angular/material/button";
+import {RouterModule} from "@angular/router";
+import {SearchComponent} from './subDirs/search/search.component';
+import {RoutingModule} from "./router";
 
 @NgModule({
   declarations: [
     AppComponent,
     AlcoholSmallComponent,
-    SearchbarComponent
+    SearchbarComponent,
+    SearchComponent
   ],
   imports: [
     HttpClientModule,
@@ -32,9 +36,12 @@ import {MatButtonModule} from "@angular/material/button";
     MatInputModule,
     ReactiveFormsModule,
     MatSidenavModule,
-    MatButtonModule
+    MatButtonModule,
+    RouterModule,
+    RoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

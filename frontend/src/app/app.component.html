@@ -5,12 +5,7 @@
 
 
   <div class="container min-vh-100">
-    <app-searchbar (searched)="search($event)"></app-searchbar>
-    <app-alcohol-small [alcohol]="alcohol"></app-alcohol-small>
-    <button type="button" mat-button (click)="drawer.toggle()">
-      Toggle sidenav
-    </button>
-
+    <router-outlet></router-outlet>
   </div>
 
 </mat-drawer-container>
