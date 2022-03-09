@@ -1,6 +1,6 @@
-<app-navbar></app-navbar>
+<app-navbar (showSidebar)="ToggleSidebar()"></app-navbar>
 <div *ngIf="mobile">
-  <app-sidebar>
+  <app-sidebar [SidebarActivate]="sidebarActivate">
   </app-sidebar>
 </div>
 

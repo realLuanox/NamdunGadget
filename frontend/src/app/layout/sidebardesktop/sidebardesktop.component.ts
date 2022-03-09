@@ -6,11 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidebardesktop.component.css']
 })
 export class SidebardesktopComponent implements OnInit {
-  showSidebar = window.innerWidth > 1080;
+  ShowSidebar = false;
   constructor() {
-    window.onresize = () => {
-      this.showSidebar = window.innerWidth > 1080;
-    };
   }
 
   ngOnInit(): void {

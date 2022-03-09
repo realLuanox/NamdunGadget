@@ -15,8 +15,15 @@ export class AppComponent implements OnInit {
 
   }
 
-  showSidebar(): void{
-    this.sidebarActivate = true;
+  ToggleSidebar(): void{
+    if(this.sidebarActivate) {
+      this.sidebarActivate = false;
+      console.log(this.sidebarActivate)
+    }
+    else if(!this.sidebarActivate) {
+      this.sidebarActivate = true;
+      console.log(this.sidebarActivate)
+    }
   }
 
   hideSidebar(): void{
