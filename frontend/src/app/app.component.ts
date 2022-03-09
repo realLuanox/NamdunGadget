@@ -8,15 +8,20 @@ import {Alcohol, Whiskey} from "./engine/interfaces/alcohol";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'NamdunGadget';
-  showSidebar = window.innerWidth > 1300;
-
+  public sidebarActivate = false;
+  desktop = window.innerWidth > 1080;
+  mobile = window.innerWidth < 1080;
   constructor() {
-    window.onresize = () => {
-      this.showSidebar = window.innerWidth > 1300;
-    };
+
   }
 
+  showSidebar(): void{
+    this.sidebarActivate = true;
+  }
+
+  hideSidebar(): void{
+    this.sidebarActivate = false;
+  }
 
   ngOnInit(): void {
   }

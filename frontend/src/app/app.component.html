@@ -1,11 +1,10 @@
-<mat-drawer-container class="w-100" autosize>
-  <mat-drawer class="p-4" style="min-width: 240px" #drawer mode="side" [opened]="showSidebar">
-    <p>hello</p>
-  </mat-drawer>
+<app-navbar></app-navbar>
+<div *ngIf="mobile">
+  <app-sidebar>
+  </app-sidebar>
+</div>
 
-
-  <div class="container min-vh-100">
-    <router-outlet></router-outlet>
-  </div>
-
-</mat-drawer-container>
+<div *ngIf="desktop">
+  <app-sidebardesktop>
+  </app-sidebardesktop>
+</div>

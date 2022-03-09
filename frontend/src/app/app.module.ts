@@ -20,6 +20,10 @@ import {RoutingModule} from "./router";
 import { FooterComponent } from './layout/footer/footer.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatIconModule} from "@angular/material/icon";
+import {MatSelectModule} from "@angular/material/select";
+import { SidebardesktopComponent } from './layout/sidebardesktop/sidebardesktop.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +34,7 @@ import { SidebarComponent } from './layout/sidebar/sidebar.component';
     FooterComponent,
     NavbarComponent,
     SidebarComponent,
+    SidebardesktopComponent,
   ],
   imports: [
     HttpClientModule,
@@ -44,7 +49,10 @@ import { SidebarComponent } from './layout/sidebar/sidebar.component';
     MatSidenavModule,
     MatButtonModule,
     RouterModule,
-    RoutingModule
+    RoutingModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
