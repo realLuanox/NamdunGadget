@@ -19,11 +19,11 @@ import {SearchComponent} from './subDirs/search/search.component';
 import {RoutingModule} from "./router";
 import { FooterComponent } from './layout/footer/footer.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
-import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIconModule} from "@angular/material/icon";
 import {MatSelectModule} from "@angular/material/select";
-import { SidebardesktopComponent } from './layout/sidebardesktop/sidebardesktop.component';
+import { PriceTableComponent } from './engine/components/price-table/price-table.component';
+import { ChipsComponent } from './engine/components/chips/chips.component';
 
 @NgModule({
   declarations: [
@@ -33,8 +33,8 @@ import { SidebardesktopComponent } from './layout/sidebardesktop/sidebardesktop.
     SearchComponent,
     FooterComponent,
     NavbarComponent,
-    SidebarComponent,
-    SidebardesktopComponent,
+    PriceTableComponent,
+    ChipsComponent,
   ],
   imports: [
     HttpClientModule,
