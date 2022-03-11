@@ -1,10 +1,11 @@
-<app-navbar (showSidebar)="ToggleSidebar()"></app-navbar>
-<div *ngIf="mobile">
-  <app-sidebar [SidebarActivate]="sidebarActivate">
-  </app-sidebar>
-</div>
-
-<div *ngIf="desktop">
-  <app-sidebardesktop>
-  </app-sidebardesktop>
-</div>
+<app-navbar [(title)]="title" (showSidebar)="ToggleSidebar()" (share)="hello($event)"></app-navbar>
+<mat-sidenav-container class="min-vh-100" autosize [hasBackdrop]="hasBackdrop" >
+  <mat-sidenav [class.mobile-only]="!desktop" class="p-4" style="min-width: 240px" [mode]="mode" [opened]="sidebarActivate">
+    <p>hello</p>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="container w-100 top-50">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
