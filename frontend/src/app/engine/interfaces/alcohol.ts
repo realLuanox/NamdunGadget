@@ -13,4 +13,15 @@ export interface Whiskey extends Alcohol {
 }
 
 
+export interface StorePrice {
+  storeName: string;
+  object: Alcohol;
+  price: number;
+}
 
+
+const a: StorePrice = {
+  storeName: '석진상회',
+  price: 60000,
+  object: {} as Whiskey,
+}
