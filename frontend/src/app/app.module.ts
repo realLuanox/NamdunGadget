@@ -24,6 +24,9 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatSelectModule} from "@angular/material/select";
 import { PriceTableComponent } from './engine/components/price-table/price-table.component';
 import { ChipsComponent } from './engine/components/chips/chips.component';
+import { IndexComponent } from './subDirs/index/index.component';
+import { AddAlcoholComponent } from './subDirs/add-alcohol/add-alcohol.component';
+import { SearchAlcoholComponent } from './subDirs/search-alcohol/search-alcohol.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +38,9 @@ import { ChipsComponent } from './engine/components/chips/chips.component';
     NavbarComponent,
     PriceTableComponent,
     ChipsComponent,
+    IndexComponent,
+    AddAlcoholComponent,
+    SearchAlcoholComponent,
   ],
   imports: [
     HttpClientModule,

@@ -1,0 +1,12 @@
+{
+  "age": 12,
+  "amount": 700,
+  "degree": 45,
+  "englishName": "Macallan 12",
+  "name": "맥켈란 12년",
+  "type": "single",
+  "storeName": "석진상회",
+  "price": 60000,
+  "image": "/static/images/mac12.jpg",
+  "description": "글렌피딕, 더 글렌리벳, 글렌모렌지와 함께 세계적인 인지도를 가지고 있는 싱글 몰트 중 하나이며, 지역적인 분류로는 스페이사이드이다. 특히 고급 & 고가 위스키의 대명사격이며, 위스키계의 롤스로이스라는 별명으로 불리기도 한다."
+}
