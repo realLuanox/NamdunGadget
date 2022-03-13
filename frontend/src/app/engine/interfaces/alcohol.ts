@@ -1,4 +1,5 @@
 export interface Alcohol {
+  type: string | 'whiskey' | 'tequila' | 'vodka' | 'rum' | 'liquor' | 'sake' | 'gin' | 'china'
   degree: number;
   amount: number;
   englishName: string;
@@ -8,7 +9,8 @@ export interface Alcohol {
 }
 
 export interface Whiskey extends Alcohol {
-  type: 'single' | 'blended';
+  whiskeyType: string | 'single malt' | 'blended malt' | 'blended' | 'grain' | 'rye';
+  notes?: string [];
   age?: number;
 }
 
@@ -18,9 +20,21 @@ export interface StorePrice {
   object: Alcohol;
   price: number;
   priceType?: string;
-  etc?:string
+  etc?: string
 }
 
+export interface Cocktail {
+  ingredient: Alcohol[];
+  method: string | 'build' | 'stir' | 'shake' | "float" | 'blend';
+  glass: string | 'old fashioned' | 'highball' | 'martini' | 'flute' | 'wine' | 'Hurricane' | 'saucer' | 'shot' | 'magarita' | 'collins' | 'toddy' | 'tiki mug' | 'copper cup';
+  is_oz: boolean;
+  description?:string;
+  name:string;
+  englishName:string;
+  degree: number;
+  amount: number;
+  bartender? :string;
+}
 
 const a: StorePrice = {
   storeName: '석진상회',
