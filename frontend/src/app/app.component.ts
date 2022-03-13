@@ -10,28 +10,37 @@ export class AppComponent implements OnInit {
   public sidebarActivate: boolean = false;
   public shared: boolean = false;
   public title: string = 'hello';
-  public mode: MatDrawerMode = "over";
+  public mode: MatDrawerMode = "side";
 
-  hasBackdrop: boolean = window.innerWidth < 768;
+  hasBackdrop: boolean = window.innerWidth < 720;
   desktop = window.innerWidth > 1280;
+  top = '64px';
 
   constructor() {
+    window.onload = () => {
+      this.SetLayout()
+      this.ChangeNavTop()
+    }
     window.onresize = () => {
-      if (window.innerWidth > 768) {
-      this.desktop = false;
-        if (window.innerWidth > 1280) {
-          this.desktop = true;
-          this.sidebarActivate = true;
-        }
+      this.SetLayout()
+    }
+  }
 
-        this.hasBackdrop = false;
-        this.mode = "side";
-      } else {
-        this.hasBackdrop = true;
-        this.desktop = false;
-        this.sidebarActivate = false;
-        this.mode = "over";
+  SetLayout(): void {
+    if (window.innerWidth > 720) {
+      this.desktop = false;
+      this.hasBackdrop = false;
+      this.mode = "side";
+      if (window.innerWidth > 1280) {
+        this.desktop = true;
+        this.sidebarActivate = true;
       }
+    } else {
+      this.ChangeNavTop();
+      this.hasBackdrop = true;
+      this.desktop = false;
+      this.sidebarActivate = false;
+      this.mode = "over";
     }
   }
 
@@ -41,6 +50,17 @@ export class AppComponent implements OnInit {
     } else if (!this.sidebarActivate) {
       this.sidebarActivate = true;
     }
+  }
+
+  ChangeNavTop() {
+    if (window.innerWidth > 600) {
+      this.top = '64px';
+      console.log(this.top);
+    } else {
+      this.top = '56px';
+      console.log(this.top);
+    }
+    return this.top;
   }
 
   hello(something: string): void {

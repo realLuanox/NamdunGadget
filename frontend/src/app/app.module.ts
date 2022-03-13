@@ -27,6 +27,10 @@ import { ChipsComponent } from './engine/components/chips/chips.component';
 import { IndexComponent } from './subDirs/index/index.component';
 import { AddAlcoholComponent } from './subDirs/add-alcohol/add-alcohol.component';
 import { SearchAlcoholComponent } from './subDirs/search-alcohol/search-alcohol.component';
+import { CalcAlcoholComponent } from './subDirs/calc-alcohol/calc-alcohol.component';
+import { AddWhiskeyComponent } from './subDirs/add-whiskey/add-whiskey.component';
+import {MatTableModule} from "@angular/material/table";
+import { SingleComponent } from './subDirs/single/single/single.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +45,9 @@ import { SearchAlcoholComponent } from './subDirs/search-alcohol/search-alcohol.
     IndexComponent,
     AddAlcoholComponent,
     SearchAlcoholComponent,
+    CalcAlcoholComponent,
+    AddWhiskeyComponent,
+    SingleComponent,
   ],
   imports: [
     HttpClientModule,
@@ -58,7 +65,8 @@ import { SearchAlcoholComponent } from './subDirs/search-alcohol/search-alcohol.
     RoutingModule,
     MatToolbarModule,
     MatIconModule,
-    MatSelectModule
+    MatSelectModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

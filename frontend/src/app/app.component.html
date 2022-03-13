@@ -1,13 +1,13 @@
 <div>
-  <app-navbar class="toolbar" [(title)]="title" (showSidebar)="ToggleSidebar()" (share)="hello($event)"></app-navbar>
-  <mat-sidenav-container class="min-vh-100" autosize [hasBackdrop]="hasBackdrop">
-    <mat-sidenav [class.mobile-only]="!desktop" class="p-4 toolbar" style="min-width: 240px" [mode]="mode"
+  <app-navbar [(title)]="title" (showSidebar)="ToggleSidebar()" (share)="hello($event)"></app-navbar>
+  <mat-sidenav-container [ngStyle]="{top: this.top}" class="min-vh-100" autosize [hasBackdrop]="hasBackdrop">
+    <mat-sidenav [ngStyle]="{top: this.top}" [class.mobile-only]="!desktop" [class.desktop]="desktop"  class="p-4" style="min-width: 240px;" [mode]="mode"
                  [opened]="sidebarActivate">
       <p>hello</p>
     </mat-sidenav>
     <mat-sidenav-content>
       <div class="container w-100">
-        <router-outlet class="outlet" ></router-outlet>
+        <router-outlet class="outlet"></router-outlet>
       </div>
     </mat-sidenav-content>
   </mat-sidenav-container>

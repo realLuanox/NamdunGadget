@@ -13,5 +13,7 @@ body {
   top:64px;
 }
 
-.outlet .toolbar {
+.desktop {
+  position: fixed;
+  top: 64px;
 }
