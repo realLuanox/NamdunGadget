@@ -17,6 +17,8 @@ export interface StorePrice {
   storeName: string;
   object: Alcohol;
   price: number;
+  priceType?: string;
+  etc?:string
 }
 
 
