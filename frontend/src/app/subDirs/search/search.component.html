@@ -1,2 +1,12 @@
-<app-searchbar (searched)="search($event)"></app-searchbar>
-<app-alcohol-small [alcohol]="alcohol"></app-alcohol-small>
+<mat-tab-group>
+  <mat-tab label="First">
+    <app-searchbar (searched)="search($event)"></app-searchbar>
+    <app-alcohol-small [alcohol]="alcohol">
+    </app-alcohol-small>
+    <app-price-table></app-price-table>
+  </mat-tab>
+  <mat-tab label="Second"> Content 2</mat-tab>
+  <mat-tab label="Third"> Content 3</mat-tab>
+</mat-tab-group>
+
+
