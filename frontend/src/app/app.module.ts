@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
@@ -30,7 +29,11 @@ import { SearchAlcoholComponent } from './subDirs/search-alcohol/search-alcohol.
 import { CalcAlcoholComponent } from './subDirs/calc-alcohol/calc-alcohol.component';
 import { AddWhiskeyComponent } from './subDirs/add-whiskey/add-whiskey.component';
 import {MatTableModule} from "@angular/material/table";
-import { SingleComponent } from './subDirs/single/single/single.component';
+import { AlcoholComponent } from './subDirs/alcohol/alcohol.component';
+import {MatListModule} from "@angular/material/list";
+import {MatTabsModule} from "@angular/material/tabs";
+import {MatStepperModule} from "@angular/material/stepper";
+import {MatRippleModule} from "@angular/material/core";
 
 @NgModule({
   declarations: [
@@ -47,7 +50,7 @@ import { SingleComponent } from './subDirs/single/single/single.component';
     SearchAlcoholComponent,
     CalcAlcoholComponent,
     AddWhiskeyComponent,
-    SingleComponent,
+    AlcoholComponent,
   ],
   imports: [
     HttpClientModule,
@@ -66,7 +69,11 @@ import { SingleComponent } from './subDirs/single/single/single.component';
     MatToolbarModule,
     MatIconModule,
     MatSelectModule,
-    MatTableModule
+    MatTableModule,
+    MatListModule,
+    MatTabsModule,
+    MatStepperModule,
+    MatRippleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

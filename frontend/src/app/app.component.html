@@ -1,9 +1,27 @@
 <div>
   <app-navbar [(title)]="title" (showSidebar)="ToggleSidebar()" (share)="hello($event)"></app-navbar>
   <mat-sidenav-container [ngStyle]="{top: this.top}" class="min-vh-100" autosize [hasBackdrop]="hasBackdrop">
-    <mat-sidenav [ngStyle]="{top: this.top}" [class.mobile-only]="!desktop" [class.desktop]="desktop"  class="p-4" style="min-width: 240px;" [mode]="mode"
+    <mat-sidenav [ngStyle]="{top: this.top}" [class.mobile-only]="!desktop" [class.desktop]="desktop"
+                 style="min-width: 240px;" [mode]="sidebarMode"
                  [opened]="sidebarActivate">
-      <p>hello</p>
+      <mat-nav-list>
+        <a mat-list-item routerLink="search" (click)="redirect.emit(null);">
+          <mat-icon mat-list-icon>search</mat-icon>
+          검색하기
+        </a>
+        <a mat-list-item routerLink="" (click)="redirect.emit(null);">
+          <mat-icon mat-list-icon>attach_money</mat-icon>
+          가격 추가하기
+        </a>
+        <a mat-list-item routerLink="add/alcohol " (click)="redirect.emit(null);">
+          <mat-icon mat-list-icon>add_circle</mat-icon>
+          주류 추가하기
+        </a>
+        <a mat-list-item routerLink="/calculate" (click)="redirect.emit(null);">
+          <mat-icon mat-list-icon>calculate</mat-icon>
+          계산하기
+        </a>
+      </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
       <div class="container w-100">

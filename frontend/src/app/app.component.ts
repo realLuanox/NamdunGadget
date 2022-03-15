@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, EventEmitter, Output} from '@angular/core';
 import {MatDrawerMode} from "@angular/material/sidenav";
 
 @Component({
@@ -7,10 +7,12 @@ import {MatDrawerMode} from "@angular/material/sidenav";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  @Output() redirect = new EventEmitter<any>();
+
   public sidebarActivate: boolean = false;
   public shared: boolean = false;
   public title: string = 'hello';
-  public mode: MatDrawerMode = "side";
+  public sidebarMode: MatDrawerMode = "side";
 
   hasBackdrop: boolean = window.innerWidth < 720;
   desktop = window.innerWidth > 1280;
@@ -30,7 +32,7 @@ export class AppComponent implements OnInit {
     if (window.innerWidth > 720) {
       this.desktop = false;
       this.hasBackdrop = false;
-      this.mode = "side";
+      this.sidebarMode = "side";
       if (window.innerWidth > 1280) {
         this.desktop = true;
         this.sidebarActivate = true;
@@ -40,7 +42,7 @@ export class AppComponent implements OnInit {
       this.hasBackdrop = true;
       this.desktop = false;
       this.sidebarActivate = false;
-      this.mode = "over";
+      this.sidebarMode = "over";
     }
   }
 
