@@ -1,0 +1,44 @@
+[
+  {
+    "age": 12,
+    "amount": 700,
+    "degree": 45,
+    "englishName": "Macallan 12",
+    "name": "맥켈란 12년",
+    "type": "single",
+    "image": "/static/images/mac12.jpg",
+    "description": "글렌피딕, 더 글렌리벳, 글렌모렌지와 함께 세계적인 인지도를 가지고 있는 싱글 몰트 중 하나이며, 지역적인 분류로는 스페이사이드이다. 특히 고급 & 고가 위스키의 대명사격이며, 위스키계의 롤스로이스라는 별명으로 불리기도 한다."
+  },
+  {
+    "age": 15,성
+    "amount": 700,
+    "degree": 45,
+    "englishName": "Glenfiddich 15",
+    "name": "글랜피딕 15년",
+    "type": "single",
+    "image": "/static/images/glan15.jpg",
+    "description": "글렌피딕의 제품군중 위스키 전문가들이 가장 선호하는 위스키. 꿀과 바닐라 같은 복잡하고 깊은 향이 특징이다. 그런것 치곤 유럽기준 30€ 정도로 굉장히 저렴한 편이다."
+  },
+  {
+    "age": 12,
+    "amount": 700,
+    "degree": 45,
+    "englishName": "Macallan 12",
+    "name": "맥켈란 12년",
+    "type": "single",
+    "storeName": "석진상회",
+    "price": 60000,
+    "image": "/static/images/mac12.jpg",
+    "description": "글렌피딕, 더 글렌리벳, 글렌모렌지와 함께 세계적인 인지도를 가지고 있는 싱글 몰트 중 하나이며, 지역적인 분류로는 스페이사이드이다. 특히 고급 & 고가 위스키의 대명사격이며, 위스키계의 롤스로이스라는 별명으로 불리기도 한다."
+  },
+  {
+    "amount": 700,
+    "degree": 20,
+    "englishName": "St. germain",
+    "name": "생 제르망",
+    "type": "single",
+    "price" : 67000,
+    "image": "/static/images/stgermain.jpg",
+    "description": "1병에 1,000개의 엘더플라워 꽃이 담긴 리큐르를 들어보셨나요? ‘생 제르맹’은 2007년 프랑스에서 탄생한 세계 최초의 엘더플라워 리큐르입니다. 엘더플라워는 과일 못지않은 맛 덕분에 하늘에서 내려온 선물이라고도 불리는데요. 늦은 봄, 야생에서 직접 손으로 채취한 꽃의 향과 색을 추출하여 만든 게 생 제르맹입니다. 그리고 보틀에는 엘더플라워를 수확한 연도가 넘버링이 돼 있어 그 가치와 특별함을 더하고 있습니다."
+  }
+]
