@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import { Component, OnInit } from '@angular/core';
 import {Alcohol, Whiskey} from "../../engine/interfaces/alcohol";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {ApiService} from "../../engine/services/api.service";
 
 @Component({
@@ -11,6 +11,18 @@ import {ApiService} from "../../engine/services/api.service";
 
 export class AddAlcoholComponent implements OnInit {
   alcohol: Alcohol | null = null;
+  alcoholCategory: string[] = [
+    '위스키',
+    '데킬라',
+    '보드카',
+    '럼',
+    '리큐르',
+    '사케',
+    '진',
+    '중국술',
+    '미니어처',
+    '기타',
+  ];
 
   isLinear = false;
   firstFormGroup: FormGroup = this._formBuilder.group({
@@ -32,5 +44,6 @@ export class AddAlcoholComponent implements OnInit {
       this.alcohol = value;
     });
   }
+
 }
 
