@@ -11,7 +11,6 @@ import {MatTableDataSource} from "@angular/material/table";
 export class PriceTableComponent implements OnInit {
   @Input() price = [] as StorePrice[];
   priceSource = new MatTableDataSource<StorePrice>(this.price)
-  priceColumns: string[] = ['amount', 'price', 'price per 100ml'];
   ELEMENT_DATA: PeriodicElement[] = [
     {name: '와인하우스', price: 63000, amount: '700', date: "20/03/11"},
     {name: '석진상회', price: 60000, amount: '700', date: "20/04/17"},
@@ -21,8 +20,9 @@ export class PriceTableComponent implements OnInit {
     {name: '석진상회', price: 60000, amount: '700', date: " 20/05/08"},
     {name: '롯데마트 송파점', price: 60000, amount: '700', date: "20/05/08"},
   ];
-
-  displayedColumns: string[] = ['demo-name', 'demo-price', 'demo-date'];
+  small = window.innerWidth < 500;
+  priceColumns: string[] = this.small ? ['amount', 'price per 100ml'] :  ['amount', 'price', 'price per 100ml'];
+  displayedColumns: string[] = this.small ? ['demo-name', 'demo-date'] : ['demo-name', 'demo-price', 'demo-date'];
   dataSource = this.ELEMENT_DATA;
 
   constructor() {
