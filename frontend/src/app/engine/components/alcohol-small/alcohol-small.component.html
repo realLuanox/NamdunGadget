@@ -1,15 +1,16 @@
 <mat-card *ngIf="alcohol" >
-  <mat-card-header>
+  <mat-card-header style="margin-left: -16px;">
     <mat-card-title [innerText]="alcohol.name"></mat-card-title>
     <mat-card-subtitle [innerText]="alcohol.englishName"></mat-card-subtitle>
+    <app-chips [alcohol]="alcohol"></app-chips>
   </mat-card-header>
   <mat-card-content>
     <div class="container row">
       <div class="col-12 col-md-6 mt-auto mb-auto">
-        <img mat-card-image [src]="alcohol.image" [alt]="alcohol.name">
+        <img mat-card-image style="margin-top: 30px;" [src]="alcohol.image" [alt]="alcohol.name">
       </div>
       <div class="col-12 col-md-6 mt-auto mb-auto">
-        <app-price-table></app-price-table>
+        <app-price-table [price]="alcohol.storePrices"></app-price-table>
       </div>
     </div>
     <p class="mt-4" [innerText]="alcohol.description"></p>
