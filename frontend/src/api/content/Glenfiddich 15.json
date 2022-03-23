@@ -1,11 +1,42 @@
 {
   "age": 15,
-  "amount": 700,
   "degree": 45,
   "englishName": "Glenfiddich 15",
   "name": "글랜피딕 15년",
-  "type": "single",
-  "image": "/static/images/glan15.jpg",
+  "type": "위스키",
+  "whiskeyType": "싱글 몰트",
+  "image": "/static/images/glen15.jpg",
+  "storePrices": [
+    {
+      "storeName": "석진상회",
+      "buyDate": "2017/07/10",
+      "price": "48000",
+      "amount": 700
+    },
+    {
+      "storeName": "안성상회",
+      "buyDate": "2018/04/20",
+      "price": "50000",
+      "amount": 700
+    },
+    {
+      "storeName": "형제상회",
+      "buyDate": "2017/04/10",
+      "price": "53000",
+      "amount": 700
+    },
+    {
+      "storeName": "골드컴퍼니",
+      "buyDate": "2017/06/05",
+      "price": "45000",
+      "amount": 700
+    },
+    {
+      "storeName": "와인앤모어",
+      "buyDate": "2017/08/10",
+      "price": "50000",
+      "amount": 700
+    }
+  ],
   "description": "글렌피딕의 제품군중 위스키 전문가들이 가장 선호하는 위스키. 꿀과 바닐라 같은 복잡하고 깊은 향이 특징이다. 그런것 치곤 유럽기준 30€ 정도로 굉장히 저렴한 편이다."
 }
-
