@@ -27,13 +27,18 @@ import { IndexComponent } from './subDirs/index/index.component';
 import { AddAlcoholComponent } from './subDirs/add-alcohol/add-alcohol.component';
 import { SearchAlcoholComponent } from './subDirs/search-alcohol/search-alcohol.component';
 import { CalcAlcoholComponent } from './subDirs/calc-alcohol/calc-alcohol.component';
-import { AddWhiskeyComponent } from './subDirs/add-whiskey/add-whiskey.component';
 import {MatTableModule} from "@angular/material/table";
 import { AlcoholComponent } from './subDirs/alcohol/alcohol.component';
 import {MatListModule} from "@angular/material/list";
 import {MatTabsModule} from "@angular/material/tabs";
 import {MatStepperModule} from "@angular/material/stepper";
 import {MatRippleModule} from "@angular/material/core";
+import { AddAlcoholPriceComponent } from './subDirs/add-alcohol-price/add-alcohol-price.component';
+import {MaterialFileInputModule} from "ngx-material-file-input";
+import { ButtonComponent } from './engine/components/button/button.component';
+import { BeverageSmallComponent } from './engine/components/beverage-small/beverage-small.component';
+import { TitleListComponent } from './engine/components/title-list/title-list.component';
+import {MatChipsModule} from "@angular/material/chips";
 
 @NgModule({
   declarations: [
@@ -49,8 +54,11 @@ import {MatRippleModule} from "@angular/material/core";
     AddAlcoholComponent,
     SearchAlcoholComponent,
     CalcAlcoholComponent,
-    AddWhiskeyComponent,
     AlcoholComponent,
+    AddAlcoholPriceComponent,
+    ButtonComponent,
+    BeverageSmallComponent,
+    TitleListComponent,
   ],
   imports: [
     HttpClientModule,
@@ -73,7 +81,9 @@ import {MatRippleModule} from "@angular/material/core";
     MatListModule,
     MatTabsModule,
     MatStepperModule,
-    MatRippleModule
+    MatRippleModule,
+    MaterialFileInputModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
