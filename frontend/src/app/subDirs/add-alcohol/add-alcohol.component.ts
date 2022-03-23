@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Alcohol, Whiskey} from "../../engine/interfaces/alcohol";
+import {Alcohol} from "../../engine/interfaces/alcohol";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {ApiService} from "../../engine/services/api.service";
 
@@ -40,7 +40,7 @@ export class AddAlcoholComponent implements OnInit {
   }
 
   search(value: string): void {
-    this.apiService.get<Whiskey>(`/api/content/${value}.json`).subscribe(value => {
+    this.apiService.get<Alcohol>(`/api/content/${value}.json`).subscribe(value => {
       this.alcohol = value;
     });
   }
