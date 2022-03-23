@@ -1,1 +1,5 @@
-<p>chips works!</p>
+<mat-chip-list *ngIf="alcohol" aria-label="category">
+  <mat-chip *ngIf="alcohol.type" color="">{{alcohol.type}}</mat-chip>
+  <mat-chip *ngIf="alcohol.alcoholType" color="">{{alcohol.alcoholType}}</mat-chip>
+  <mat-chip *ngIf="alcohol.whiskeyType" color="">{{alcohol.whiskeyType}}</mat-chip>
+</mat-chip-list>
