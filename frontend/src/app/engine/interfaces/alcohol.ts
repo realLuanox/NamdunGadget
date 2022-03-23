@@ -1,3 +1,6 @@
+
+
+
 export interface Alcohol {
   type: string | 'whiskey' | 'tequila' | 'vodka' | 'rum' | 'liquor' | 'sake' | 'gin' | 'china'
   degree: number;
@@ -6,38 +9,33 @@ export interface Alcohol {
   name: string;
   image: string;
   description?: string;
+  whiskeyType?: string | 'single malt' | 'blended malt' | 'blended' | 'grain' | 'rye';
+  alcoholType?: string;
+  age?: 'N/A' | number;
+  storePrices: StorePrice[];
 }
-
-export interface Whiskey extends Alcohol {
-  whiskeyType: string | 'single malt' | 'blended malt' | 'blended' | 'grain' | 'rye';
-  notes?: string [];
-  age?: number;
-}
-
 
 export interface StorePrice {
+  buyDate: string;
+  amount: number;
   storeName: string;
-  object: Alcohol;
   price: number;
   priceType?: string;
-  etc?: string
+  etc?: string;
 }
+
+
 
 export interface Cocktail {
   ingredient: Alcohol[];
-  method: string | 'build' | 'stir' | 'shake' | "float" | 'blend';
+  method: string []| 'build' | 'stir' | 'shake' | "float" | 'blend';
   glass: string | 'old fashioned' | 'highball' | 'martini' | 'flute' | 'wine' | 'Hurricane' | 'saucer' | 'shot' | 'magarita' | 'collins' | 'toddy' | 'tiki mug' | 'copper cup';
   is_oz: boolean;
+  ice: 'crushed' | 'cubed' | 'none' ;
   description?:string;
   name:string;
   englishName:string;
   degree: number;
   amount: number;
   bartender? :string;
-}
-
-const a: StorePrice = {
-  storeName: '석진상회',
-  price: 60000,
-  object: {} as Whiskey,
 }
